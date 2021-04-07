@@ -14,7 +14,7 @@ process.on('uncaughtException', err => {
 
 
 // Setting up config file
-if (process.env.NODE_ENV !== 'PRODUCTION') dotenv.config({ path: './config/.env' });
+if (process.env.NODE_ENV !== 'PRODUCTION') dotenv.config({ path: '../.env' });
 
 const port = process.env.PORT || 5000;
 connectDatabase()

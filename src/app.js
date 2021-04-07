@@ -13,7 +13,7 @@ import documentRoute from './routes/document';
 const app = express();
 
 // Setting up config file
-if (process.env.NODE_ENV !== 'PRODUCTION') dotenv.config({ path: './config/.env' });
+if (process.env.NODE_ENV !== 'PRODUCTION') dotenv.config({ path: '../.env' });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
