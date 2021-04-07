@@ -31,15 +31,11 @@ cloudinary.config({
 // import all routes
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/', documentRoute);
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use('/', (req, res) => {
+	res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
+});
 
-
-if (process.env.NODE_ENV === 'PRODUCTION') {
-	app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
-	});
-}
 
 
 
