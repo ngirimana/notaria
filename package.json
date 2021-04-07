@@ -7,7 +7,7 @@
   "author": "NGIRIMANA Schadrack",
   "license": "MIT",
   "scripts": {
-    "start": "SET babel-node src/server.js",
+    "start": "babel-node src/server.js",
     "dev": "nodemon --exec babel-node src/server.js",
      "prod": "SET NODE_ENV=PRODUCTION& nodemon --exec babel-node src/server",
     "seeder": "babel-node src/utils/seeder.js",
